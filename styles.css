@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  max-width: 90%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6a11cb;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+
+button {
+  padding: 10px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  padding: 12px;
+  background-color: #fefefe;
+  margin-top: 10px;
+  border-left: 5px solid #6a11cb;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease-in;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #bbb;
+  background-color: #e8e8e8;
+}
+
+li button {
+  margin-left: 8px;
+  background: #ff4d4d;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+li button:hover {
+  background: #e60000;
+}
